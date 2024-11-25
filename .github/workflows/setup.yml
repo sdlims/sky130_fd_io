@@ -79,11 +79,13 @@ jobs:
 
       - name: Download Caravel
         run: |
+              cd ${{ env.tools }}
               git clone --depth 1 https://github.com/efabless/caravel.git
               make -C caravel gds/chip_io.gds
 
       - name: Download Backend Layout Check Scripts
         run: |
+              cd ${{ env.tools }}
               git clone --depth 1 https://github.com/d-m-bailey/extra_be_checks.git backend_layout_checks
 
       - name: Verify Installation with Mitch Baileys sky130_io Schematics
