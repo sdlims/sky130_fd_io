@@ -74,7 +74,7 @@ jobs:
         run: |
               python3 -m venv sky130-venv
               sky130-venv/bin/python3 -m pip install --upgrade --no-cache-dir volare
-              export PDK_ROOT=${{ github.tools }}/volare
+              export PDK_ROOT=${{ env.tools }}/volare
               sky130-venv/bin/volare enable 6d4d11780c40b20ee63cc98e645307a9bf2b2ab8
 
       - name: Download Caravel
