@@ -88,9 +88,9 @@ jobs:
 
       - name: Verify Installation with Mitch Baileys sky130_io Schematics
         run: |
-              export CARAVEL_ROOT=${{ github.workspace }}/caravel
-              export LVS_ROOT=${{ github.workspace }}/backend_layout_checks
-              export WORK_ROOT=${{ github.workspace }}/mitch_bailey_sky130_io_schematics/work/top_gpiov2
+              export CARAVEL_ROOT=${{ env.tools }}/caravel
+              export LVS_ROOT=${{ env.tools }}/backend_layout_checks
+              export WORK_ROOT=${{ env.tools }}/mitch_bailey_sky130_io_schematics/work/top_gpiov2
               export PDKPATH=${{ env.tools }}/volare/sky130A
               export PDK_ROOT=${{ env.tools }}/volare
               export PDK=sky130A
