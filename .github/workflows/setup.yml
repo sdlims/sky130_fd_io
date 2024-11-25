@@ -70,7 +70,7 @@ jobs:
               make install
               echo "${{ env.tools }}/netgen/bin" >> $GITHUB_PATH
 
-      - name: Generate PDK files
+      - name: Generate PDK Library
         run: |
               python3 -m venv sky130-venv
               sky130-venv/bin/python3 -m pip install --upgrade --no-cache-dir volare
